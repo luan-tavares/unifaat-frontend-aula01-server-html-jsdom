@@ -12,8 +12,8 @@ services:
       - ./public:/var/www
       - ./logs/nginx:/var/log/nginx
     networks:
-      - app_network_01
+      - app_network
 
 networks:
-  app_network_01:
+  app_network:
     driver: bridge
