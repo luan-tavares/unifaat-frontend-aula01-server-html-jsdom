@@ -87,3 +87,9 @@ body {
 .list-names button:hover {
     background-color: #a71d2a;
 }
+
+section>img {
+    width: 200px;
+    height: auto;
+    display: block;
+}
