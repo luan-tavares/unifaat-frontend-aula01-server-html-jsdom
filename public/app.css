@@ -1,64 +1,109 @@
-/* Reset básico */
+/* Reset rápido */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Estilo do body */
 body {
-    background: #f5f5f5;
+    background: #f7f7f7;
     color: #333;
+    line-height: 1.5;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding: 30px;
+    min-height: 100vh;
 }
 
-/* Container de input */
-.input-container {
+header,
+.header,
+footer,
+.footer {
+    background: #004d7a;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+header h1,
+.header h1 {
+    font-size: 1.5rem;
+}
+
+main,
+.main {
+    padding: 40px 0;
+    display: flex;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Artigo com imagem e lista */
+article,
+.article {
+    flex: 1;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+aside img,
+.aside img {
+    max-width: 120px;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+/* Lista */
+#list-container {
     display: flex;
     gap: 10px;
-    margin-bottom: 20px;
+    flex-direction: column;
 }
 
-#list-add {
-    padding: 10px;
-    font-size: 1rem;
-    border: 2px solid #ccc;
+/* Aside com input */
+aside,
+.aside {
+    flex: 0 0 250px;
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    height: fit-content;
+}
+
+input[type="text"] {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
     border-radius: 6px;
-    width: 250px;
-    transition: border-color 0.3s;
-}
-
-#list-add:focus {
     outline: none;
-    border-color: #007bff;
 }
 
-/* Botão adicionar */
-#button-add {
-    padding: 10px 20px;
-    font-size: 1rem;
-    background-color: #007bff;
+button {
+    padding: 0.5rem;
+    background: #004d7a;
     color: #fff;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    transition: background 0.3s;
+    font-weight: bold;
 }
 
-#button-add:hover {
-    background-color: #0056b3;
+button:hover {
+    background: #003853;
 }
 
-/* Lista */
-.list-names {
-    list-style: none;
-    width: 100%;
-    max-width: 400px;
+footer,
+.footer {
+    font-size: 0.9rem;
 }
+
 
 .list-names li {
     gap: 5px;
@@ -86,10 +131,4 @@ body {
 
 .list-names button:hover {
     background-color: #a71d2a;
-}
-
-section>img {
-    width: 200px;
-    height: auto;
-    display: block;
 }
