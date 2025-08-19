@@ -30,11 +30,11 @@ ulElement.setAttribute("class", "list-names");
 // PORÉM NÃO FOI INSERIDO NA ÁVORE DOM
 console.log(ulElement);
 
-
-/** iNSERIR ENO NÓ DO CONTAINER PRINCIPAL DA ÁRVORE DOM */
+/*
+//iNSERIR ENO NÓ DO CONTAINER PRINCIPAL DA ÁRVORE DOM
 sectionListElement.append(ulElement);
 
-/*
+
 names.forEach((name) => {
     // Criar o elemento li, item de uma lista
     const liElement = document.createElement("li");
@@ -42,7 +42,7 @@ names.forEach((name) => {
     // Adicionar um conteúdo texto no elemento li
     liElement.innerText = name;
 
-    console.log(liElement);
+    //console.log(liElement);
 
     // Criar o botao excluir
     const buttonDeleteElement = document.createElement("button");
@@ -51,7 +51,7 @@ names.forEach((name) => {
         onDelete(event);
     });
 
-    console.log(buttonDeleteElement);
+    // console.log(buttonDeleteElement);
 
     liElement.append("   ", buttonDeleteElement);
 
@@ -73,10 +73,17 @@ buttonListAddElement.addEventListener("click", (event) => {
     // Criar o elemento li, item de uma lista
     const liElement = document.createElement("li");
 
+    const buttonDeleteElement = document.createElement("button");
 
+    buttonDeleteElement.addEventListener("click", (event) => {
+        onDelete(event);
+    });
+
+
+    buttonDeleteElement.innerHTML = "<strong>Excluir</strong>";
 
     // Adicionar um conteúdo texto no elemento li
-    liElement.append(inputValue);
+    liElement.append(inputValue, buttonDeleteElement);
 
     // Adicionar na árvore DOM, no nosso ul principal
     ulElement.append(liElement);
@@ -86,9 +93,8 @@ buttonListAddElement.addEventListener("click", (event) => {
 });
 
 function onDelete(event) {
-   //CODAR
 }
-*/
 
+*/
 
 //});
