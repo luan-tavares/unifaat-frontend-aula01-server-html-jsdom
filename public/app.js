@@ -73,17 +73,10 @@ buttonListAddElement.addEventListener("click", (event) => {
     // Criar o elemento li, item de uma lista
     const liElement = document.createElement("li");
 
-    const buttonDeleteElement = document.createElement("button");
 
-    buttonDeleteElement.addEventListener("click", (event) => {
-        onDelete(event);
-    });
-
-
-    buttonDeleteElement.innerHTML = "<strong>Excluir</strong>";
 
     // Adicionar um conteúdo texto no elemento li
-    liElement.append(inputValue, buttonDeleteElement);
+    liElement.append(inputValue);
 
     // Adicionar na árvore DOM, no nosso ul principal
     ulElement.append(liElement);
